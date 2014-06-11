@@ -625,6 +625,8 @@ class dstat_cpu(dstat):
                 varlist.append(str(cpu))
                 cpu = cpu + 1
 #           if len(varlist) > 2: varlist = varlist[0:2]
+            if 'total' in op.cpulist:
+                varlist.append('total')
         elif op.cpulist:
             varlist = op.cpulist
         else:
